@@ -6,7 +6,7 @@ import javax.persistence.Persistence;
 public class CommonService {
 
 	public static EntityManagerFactory createEntityManagerFactory(){
-		EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("Shop");
-		return emfactory;
+		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("SuperMarket");
+		return entityManagerFactory;
 	}
 }

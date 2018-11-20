@@ -45,6 +45,7 @@ public class CreateStockServlet extends HttpServlet {
 		s.setPrice(Integer.parseInt(price));
 		s.setDescription(description);
 		
+		
 		IStockService iStockService=new StockService();
 		if(s!=null){
 			 s=iStockService.createStock(s);

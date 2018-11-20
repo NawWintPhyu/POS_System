@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>new stock</title>
 <style>
 div {
     border: 1px solid black;
-    margin-top: 100px;
+    margin-top: 8`0px;
     
      margin-bottom: 100px;
     margin-right: 100px;
@@ -28,6 +28,7 @@ text-size-adjust: auto;
 </head>
 <body>
 
+<form action="createstock" method="post">
 <div align="center">
 <h1>Create New Stock</h1>
 <table >
@@ -37,15 +38,19 @@ text-size-adjust: auto;
  </tr> <br>
 <tr>
   <td>Stock Category</td>
-  <td><input type = "text" name="category" ></td>
+  <td><input type = "text" name="category" required ></td>
  </tr> <br>
 <tr>
   <td>Stock CodeNo</td>
-  <td><input type = "text" name="codeNo" ></td>
+  <td><input type = "text" name="codeNo" required></td>
  </tr><br>
+ <tr>
+<td>Stock Quantity</td>
+<td><input type = "text" name="quantity" required></td>
+</tr><br>
 <tr>
 <td>Stock Price</td>
-<td><input type = "text" name="price" ></td>
+<td><input type = "text" name="price" required></td>
 </tr><br>
 <tr>
 <td>Stock Description</td>
@@ -54,6 +59,7 @@ text-size-adjust: auto;
 </table><br>
 <input type = "submit" value="Add New Stock" align="center">
 </div>
+</form>
 
 
 </body>

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>searchUser</title>
 
 <style>
     body { background-color: aqua; }
@@ -15,7 +15,7 @@
 <body>
 
 <h1 style="">Search User</h1>
-<form method="get" action="SearchUserSurvlet">
+<form method="get" action="searchuser">
 
 <table border=0>
 

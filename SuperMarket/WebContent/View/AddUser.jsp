@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>addUser</title>
 
 <style>
     body { background-color: aqua; }
@@ -16,7 +16,7 @@
 <body>
 
 <h1 style="">New User</h1>
-<form method="get" action="AddUserSurvlet">
+<form method="get" action="adduser">
 <table border=0>
   <tr>    
           <td><label>Name :</label></td>

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>createInvoice</title>
 
 <style>
     body { background-color: aqua; }
@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1 style="">Create Invoice</h1>
-<form method="get" action="CreateInvoiceSurvlet">
+<form method="get" action="createinvoice">
 <table border=0>
   <tr>    
           <td><label>Stock Name :</label></td>

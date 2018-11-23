@@ -20,17 +20,40 @@ align :center;
 
 <div>
 
-  Enter Stock Code No&nbsp;<input type="text" name="codeNo">&nbsp;&nbsp;
-  Enter Stock Name &nbsp;<input type="text" name="name">&nbsp;&nbsp;
-  Enter Stock Category <input type="text" name="category">&nbsp;&nbsp;
- <input type="button" value="Search Stock" id="searchStock">&nbsp;
- <input type="button" value="Update Stock" id="updateStock">
+<table>
+<tr>
+   <td>Enter Stock Id</td>
+   <td><input type="text" name="codeNo"></td>
+   <td>Enter Stock Code No:</td>
+   <td><input type="text" name="codeNo"></td>
+   <td>Enter Stock Name:</td>
+   <td><input type="text" name="name"></td>
+   <td>Enter Stock Category:</td>
+   <td> <input type="text" name="category"></td>
+ </tr>
  
+ <tr>
+
+   <td> Enter Stock Minimun Price:</td>
+   <td><input type="text" name="min"></td>
+   <td>  Enter Stock Maximun Price:</td>
+   <td><input type="text" name="max"></td>
+   <td>Enter User ID:</td>
+   <td><input type="text" name="userId"></td>
+   <td>Enter User Name:</td>
+   <td><input type="text" name="userName"></td>
+ </tr>
+</table>
+<br><br>
+<div align="center">
+ <input type="button" value="Search Stock" id="searchStock" margin="left" width="30px">&nbsp;
+ <input type="button" value="Update Stock" id="updateStock" margin="left">
+ </div>
   
   
 </div><br><br>
-<div align="center" id="div1">
- <textarea rows="50" cols="500">
+<div id="div1">
+ <textarea rows="60" cols="1000">
   Stock Information
  </textarea>
 </div>

@@ -34,6 +34,14 @@
           <td><br><label>Address :</label></td>
           <td><br><input type="text" name="addText4" placeholder="Enter your address" required /> </td>
   </tr>
+  <tr>    
+          <td><br><label>Password :</label></td>
+          <td><br><input type="text" name="addText5" placeholder="Enter your password" required /> </td>
+  </tr>
+  <tr>    
+          <td><br><label>Retype confirm password:</label></td>
+          <td><br><input type="text" name="addText6" placeholder="Enter confirm password" required /> </td>
+  </tr>
 </table>
 <br> 	  
 	
@@ -46,7 +54,7 @@
 
 	</div>
     <br><br> 
-	<input type="submit" value="Next"/>
+	<input type="submit" value="Login"/>
 </form>
 
 </body>

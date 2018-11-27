@@ -8,35 +8,76 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class AddUserSurvlet
- */
+import Model.T_User;
+import Service.IUserService;
+import Service.UserService;
+
+
 @WebServlet("/adduser")
 public class AddUserServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public AddUserServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
+    
+   
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+	
+		request.getRequestDispatcher("/View/AddUser.jsp").forward(request, response);
+		
+		
+		
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		
+		//doGet(request, response);
+		
+		int roleID = 0;
+		String userName=request.getParameter("addText1");
+		int phoneNumber=Integer.parseInt(request.getParameter("addText2"));
+		String email=request.getParameter("addText3");
+		String address=request.getParameter("addText4");
+		String password=request.getParameter("addText5");
+		String retypePassword=request.getParameter("addText6");
+		if(password.equals(retypePassword)){
+			String  userType=request.getParameter("radioBtn");
+			
+			switch (userType) {
+			
+	    	case "admin":
+	    	roleID=1;	
+			break;
+			
+			case "manager":
+			roleID=51;
+			break;
+			
+			case "salePerson":
+			roleID=101;
+			break;
+			
+			}
+			
+			T_User user=new T_User();
+			user.setUserName(userName);
+			user.setPhoneNumber(phoneNumber);
+			user.setEmail(email);
+			user.setAddress(address);
+			user.setPassword(password);
+			user.setRoleID(roleID);
+			
+			IUserService iUserService=new UserService();
+			user=iUserService.createUser(user);
+			
+			
+		}
+		else{
+			
+			
+			
+		}
+		request.getRequestDispatcher("/View/AddUser.jsp").forward(request, response);
+		
 	}
 
 }

@@ -16,31 +16,31 @@
 <body>
 
 <h1 style="">New User</h1>
-<form method="get" action="adduser">
+<form method="post" action="adduser">
 <table border=0>
   <tr>    
           <td><label>Name :</label></td>
-          <td><input type="text" name="addText1" placeholder="Enter your name" required/></td>
+          <td><input type="text" name="addText1"  required/></td>
   </tr>
   <tr>    
           <td><br><label>Phone No : </label> </td>
-          <td><br><input type="text" name="addText2" placeholder="Enter your phone number" required /></td>
+          <td><br><input type="text" name="addText2"  required /></td>
   </tr>
   <tr>    
           <td><br><label>Email :</label></td>
-          <td><br><input type="email" name="addText3" placeholder="Enter your email" required /> </td>
+          <td><br><input type="email" name="addText3"  required /> </td>
   </tr>
    <tr>    
           <td><br><label>Address :</label></td>
-          <td><br><input type="text" name="addText4" placeholder="Enter your address" required /> </td>
+          <td><br><input type="text" name="addText4"  required /> </td>
   </tr>
   <tr>    
           <td><br><label>Password :</label></td>
-          <td><br><input type="text" name="addText5" placeholder="Enter your password" required /> </td>
+          <td><br><input type="text" name="addText5"  required /> </td>
   </tr>
   <tr>    
           <td><br><label>Retype confirm password:</label></td>
-          <td><br><input type="text" name="addText6" placeholder="Enter confirm password" required /> </td>
+          <td><br><input type="text" name="addText6"  required /> </td>
   </tr>
 </table>
 <br> 	  
@@ -54,7 +54,7 @@
 
 	</div>
     <br><br> 
-	<input type="submit" value="Login"/>
+	<input type="submit" value="Add User"/>
 </form>
 
 </body>

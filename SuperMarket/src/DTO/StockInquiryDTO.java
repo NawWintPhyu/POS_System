@@ -1,11 +1,19 @@
 package DTO;
 
 public class StockInquiryDTO {
+	private int stockID;
 	private String stockName;
 	private String codeNo;
 	private long minPrice;
 	private long maxPrice;
 	private String userName;
+	
+	public int getStockID() {
+		return stockID;
+	}
+	public void setStockID(int stockID) {
+		this.stockID = stockID;
+	}
 	public String getStockName() {
 		return stockName;
 	}

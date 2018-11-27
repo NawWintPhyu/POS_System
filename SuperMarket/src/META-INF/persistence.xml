@@ -5,6 +5,7 @@
 	<persistence-unit name="SuperMarket" transaction-type="RESOURCE_LOCAL">
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<class>Model.Stock</class>
+		<class>Model.UserRole</class>
 		<properties>
 
 			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/SuperMarketDB" />

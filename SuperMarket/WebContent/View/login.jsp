@@ -36,17 +36,16 @@ button:hover {
     opacity: 0.8;
 }
 
-.cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-}
 .container {
 	margin-left: 80px;
     margin-right: 80px;
     padding: 16px;
 }
-
+.radio{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding 16px;
+}
 
 span.psw {
     float: right;
@@ -73,6 +72,14 @@ span.psw {
 
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
+    <div class="radio">
+
+		<input type="radio" name="role" value="admin" checked/>Admin
+		<input type="radio" name="role" value="manager" />Manager
+		<input type="radio" name="role" value="salePerson" />Sale Person
+		
+
+	</div>
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>

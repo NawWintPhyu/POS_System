@@ -22,7 +22,7 @@ input[type=text], input[type=password] {
     box-sizing: border-box;
 }
 
-button {
+button{
     background-color: #333;
     color: white;
     padding: 14px 20px;
@@ -62,16 +62,25 @@ span.psw {
        width: 100%;
     }
 }
+
+
+
+</script>
 </style>
+<script type="text/javascript">
+function clearFields() {
+    document.getElementById("text1").value=""
+    document.getElementById("text2").value=""
+}
 </head>
 <body>
 <form action="login" method="post">
   <div class="container">
     <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+    <input type="text" id="text1" placeholder="Enter Username" name="uname" required>
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input type="password" id="text2" placeholder="Enter Password" name="psw" required>
     <div class="radio">
 
 		<input type="radio" name="role" value="admin" checked/>Admin
@@ -83,9 +92,17 @@ span.psw {
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
-    <button type="submit">Login</button>
-  </div>
+<!--     <button type="submit">Login</button> -->
+ 
+
+
+
+ </div>
+ 
+ <input type="submit" formaction="Home.jsp" value="Login"  onclick="clearFields()"  >
+  
 </form>
+
 
 </body>
 </html>

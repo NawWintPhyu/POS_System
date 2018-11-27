@@ -7,8 +7,6 @@
 <title>Home</title>
 </head>
 <body>
-<%@ include file = "Header.jsp" %>
-<form >
-</form>
+ <%@ include file = "Header.jsp" %>
 </body>
 </html>

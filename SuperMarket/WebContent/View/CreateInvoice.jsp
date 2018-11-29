@@ -97,45 +97,50 @@ table td input {
 	<form action="createinvoice" method="post">
 		<div align="center" id="code">
 			Code NO :&nbsp;&nbsp;&nbsp;<input type="text" name="codeNo" required>
-			<input type="submit" style="display: none" />
-		</div>
-		<table align="center" border="1" id="customers">
-			<tr align="right">
-				<th colspan="5" align="right">Invoice ID :&nbsp;&nbsp;&nbsp;<input
-					type="text" name="invoiceID"><br> <br>Date
-					:&nbsp;&nbsp;&nbsp;<input type="text" name="date">
-				</th>
-			</tr>
-			<tr>
-				<th>Item</th>
-				<th>Unit Cost</th>
-				<th>Quantity</th>
-				<th>Price</th>
-				<th></th>
-			</tr>
-			<c:forEach var="stock" items='${stockList}'>
-				<tr>
-					<td>${stock.stockName}</td>
-					<td>${stock.price}</td>
-					<td id="field"><input style="font-size:15px; type="text"></td>
-					<td id="field"><input style="font-size:15px; type="text"></td>
-					<td align="center" width="20px"><a href="">Remove</a></td>
-
-				</tr>
-			</c:forEach>
-
-			<tr>
-				<td colspan="2" align="center">Total</td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-		</table>
-		<div id="saveID" align="right">
-			<a href="createinvoice" name="save">Save</a> <a href="createinvoice"
-				name="print">Print</a>
+			<input type="submit" style="display: none" name="create" value="ccc"/>
 		</div>
 	</form>
+
+	<table align="center" border="1" id="customers">
+		<tr align="right">
+			<th colspan="5" align="right">Invoice ID :&nbsp;&nbsp;&nbsp;<input
+				type="text" name="invoiceID"><br> <br>Date
+				:&nbsp;&nbsp;&nbsp;<input type="text" name="date">
+			</th>
+		</tr>
+		<tr>
+			<th>Item</th>
+			<th>Unit Cost</th>
+			<th>Quantity</th>
+			<th>Price</th>
+			<th></th>
+		</tr>
+		<c:forEach var="invoiceItem" items='${invoice}'>
+			<form action="" method="post" name="price" value="ppp">
+			<tr>
+				<td>${invoiceItem.stockName}</td>
+				<td>${invoiceItem.unitCost}</td>
+				<td id="field"><input type="text" style="font-size: 15px;"><input type="submit" style="display: none"/></td>
+				<td id="field"><input style="font-size: 15px;" type="text"></td>
+				<td align="center" width="20px"><a href="">Remove</a></td>
+
+			</tr>
+			
+			</form>
+		</c:forEach>
+
+		<tr>
+			<td colspan="2" align="center">Total</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+	<div id="saveID" align="right">
+		<a href="createinvoice" name="save">Save</a> <a href="createinvoice"
+			name="print">Print</a>
+	</div>
+
 
 </body>
 </html>

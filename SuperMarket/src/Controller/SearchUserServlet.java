@@ -35,8 +35,14 @@ public class SearchUserServlet extends HttpServlet {
 		
 		UserInquiryDTO userInquiryDTO=new UserInquiryDTO();
 		
-		if(!roleName.equals("")){
-			userInquiryDTO.setRoleName(roleName);
+		if(roleName.equals("admin")){
+			userInquiryDTO.setRoleID(1);
+		}
+		if(roleName.equals("manager")){
+			userInquiryDTO.setRoleID(51);
+		}
+		if(roleName.equals("saleperson")){
+			userInquiryDTO.setRoleID(101);
 		}
 		
 		if(!userName.equals("")){

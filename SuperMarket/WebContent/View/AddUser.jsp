@@ -28,8 +28,9 @@ input[type=submit] {
 }
 
 div{
-	margin-left: 20px;
+   margin-left:25px;
 }
+
 body {
 	margin-top: -1px;
 	margin-left: -1px;

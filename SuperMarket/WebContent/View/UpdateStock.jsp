@@ -1,3 +1,4 @@
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -7,7 +8,7 @@
 <title>editStock</title>
 <style>
 input[type=text] {
-	width: 100%;
+	width: 99%;
 	padding: 6px 10px;
 	margin: 8px 0;
 	display: inline-block;
@@ -48,30 +49,30 @@ table{
 		<table align="center">
 			<tr>
 				<td>Stock Name</td>
-				<td><input type="text" name="name" required></td>
+				<td><input type="text" name="name" value="<c:out value="${stockList.stockName}"/>" required /></td>
 			</tr>
 			<tr>
 				<td>Stock CodeNo</td>
-				<td><input type="text" name="codeNo" required></td>
+				<td><input type="text" name="codeNo" value="<c:out value="${stockList.codeNo}"/>" required></td>
 			</tr>
 			<tr>
 				<td>Stock Category</td>
-				<td><input type="text" name="category" required></td>
+				<td><input type="text" name="category" value="<c:out value="${stockList.category}"/>" required></td>
 			</tr>
 			<tr>
 				<td>Stock Quantity</td>
-				<td><input type="text" name="quantity" required></td>
+				<td><input type="text" name="quantity" value="<c:out value="${stockList.quantity}"/>" required></td>
 			</tr>
 			<tr>
 				<td>Stock Price</td>
-				<td><input type="text" name="price" required></td>
+				<td><input type="text" name="price" value="<c:out value="${stockList.price}"/>" required></td>
 			</tr>
 			<tr>
 				<td>Stock Description</td>
-				<td><input type="text" name="description"></td>
+				<td><input type="text" name="description" value="<c:out value="${stockList.description}"/>"></td>
 			</tr>
 			<tr>
-				<td colspan="2"><input type="submit" value="Add" align=""></td>
+				<td colspan="2"><input type="submit" value="Update" align=""></td>
 			</tr>
 		</table>
 	</form>

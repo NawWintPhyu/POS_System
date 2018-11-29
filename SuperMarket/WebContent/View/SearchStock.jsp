@@ -31,9 +31,11 @@ input {
 	padding: 6px;
 	font-weight: bold;
 }
+
 #btnCol{
 border: 0px solid #ddd;
 }
+
 #customers {
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	border-collapse: collapse;
@@ -78,6 +80,7 @@ border: 0px solid #ddd;
 #customers a:hover, #customers a:active {
     background-color: #5d6d7e;
 }
+
 </style>
 </head>
 <body>
@@ -107,6 +110,7 @@ border: 0px solid #ddd;
 			</table>
 			<table id="customers">
 			<tr>
+			
 			<th>Stock ID</th>
 			<th>Stock Name</th>
 			<th>Code NO</th>
@@ -130,7 +134,7 @@ border: 0px solid #ddd;
 					<td>${stock.description}</td>
 					<td>${stock.status}</td>
 					<td>${stock.userID}</td>
-					<td><a href="updatestockS?id=${stock.stockID}">Update</a></td>
+					<td><a href="updatestock?id=${stock.stockID}">Update</a></td>
 				</tr>
 			</c:forEach>
 			</table>

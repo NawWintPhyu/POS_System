@@ -1,3 +1,4 @@
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -65,41 +66,38 @@ span.psw {
 
 
 
-</script>
+
 </style>
-<script type="text/javascript">
-function clearFields() {
-    document.getElementById("text1").value=""
-    document.getElementById("text2").value=""
-}
+
+
 </head>
 <body>
-<form action="login" method="post">
+<form action="login" method="post" name="formName">
   <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" id="text1" placeholder="Enter Username" name="uname" required>
+    <label for="username"><b>Username</b></label>
+    <input type="text" id="username" placeholder="Enter Username" name="username" onfocus="this.value='';" required>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" id="text2" placeholder="Enter Password" name="psw" required>
-    <div class="radio">
+    <label for="password"><b>Password</b></label>
+    <input type="password" id="password" placeholder="Enter Password" name="password" onfocus="this.value='';" required>
+    <div class="radio" id="rates">
 
-		<input type="radio" name="role" value="admin" checked/>Admin
-		<input type="radio" name="role" value="manager" />Manager
-		<input type="radio" name="role" value="salePerson" />Sale Person
+		<input type="radio" id="r1" name="role" value="admin" />Admin
+		<input type="radio" id="r2" name="role" value="manager" />Manager
+		<input type="radio" id="r3" name="role" value="salePerson" />Sale Person
 		
 
 	</div>
     <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
+      <input type="checkbox"  name="remember" checked> Remember me
     </label>
-<!--     <button type="submit">Login</button> -->
+    <button type="submit">Login</button>
  
 
 
 
  </div>
  
- <input type="submit" formaction="Home.jsp" value="Login"  onclick="clearFields()"  >
+ 
   
 </form>
 

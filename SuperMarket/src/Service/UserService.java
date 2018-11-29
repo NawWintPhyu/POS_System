@@ -36,9 +36,27 @@ public class UserService implements IUserService{
 	}
 
 	@Override
-	public T_User updateUser(T_User user) {
+	public T_User updateUser(T_User tuser) {
 		
-		return null;
+		EntityManagerFactory entityManagerFactory = CommonService.createEntityManagerFactory();
+		
+		EntityManager entityManager = entityManagerFactory.createEntityManager();
+		entityManager.getTransaction().begin();
+		
+		T_User updateUser=entityManager.find(T_User.class, tuser.getUserID());
+		updateUser.setRoleID(tuser.getRoleID());
+		updateUser.setUserName(tuser.getUserName());
+		updateUser.setPhoneNumber(tuser.getPhoneNumber());
+		updateUser.setEmail(tuser.getEmail());
+		updateUser.setPassword(tuser.getPassword());
+		
+		
+		
+		entityManager.getTransaction( ).commit( );
+		entityManager.close( );
+		entityManagerFactory.close( );
+		
+		return tuser;
 	}
 
 	@Override
@@ -51,11 +69,12 @@ public class UserService implements IUserService{
 			UserResponseDTO userResponseDTO=new UserResponseDTO();
 			
 			String query="Select tuser from T_User tuser";
+			
 			if(userInquiryDTO.getUserName()!=null){
-				query="Select tuser from T_User tuser where tuser.userName = :name";
+				query="Select tuser from T_User tuser where tuser.userName = :userName";
 			}
-			else if(userInquiryDTO.getRoleName()!=null){
-				query="Select tuser from T_User tuser where tuser.roleName = :roleName";
+			else if(userInquiryDTO.getRoleID()!=0){
+				query="Select tuser from T_User tuser where tuser.roleID = :roleID";
 			}
 			
 			Query query1=entitymanager.createQuery(query);
@@ -64,8 +83,8 @@ public class UserService implements IUserService{
 			if(userInquiryDTO.getUserName()!=null){
 				query1.setParameter("userName", userInquiryDTO.getUserName());
 			}
-			else if(userInquiryDTO.getRoleName()!=null){
-			    query1.setParameter("roleName", userInquiryDTO.getRoleName());
+			else if(userInquiryDTO.getRoleID()!=0){
+			    query1.setParameter("roleID", userInquiryDTO.getRoleID());
 			}
 			
 			List<T_User> userList=query1.getResultList();

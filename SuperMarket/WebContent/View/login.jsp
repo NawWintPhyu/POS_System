@@ -75,10 +75,10 @@ span.psw {
 <form action="login" method="post" name="formName">
   <div class="container">
     <label for="username"><b>Username</b></label>
-    <input type="text" id="username" placeholder="Enter Username" name="username" onfocus="this.value='';" required>
+    <input type="text" id="username" placeholder="Enter Username" name="username"  required>
 
     <label for="password"><b>Password</b></label>
-    <input type="password" id="password" placeholder="Enter Password" name="password" onfocus="this.value='';" required>
+    <input type="password" id="password" placeholder="Enter Password" name="password"  required>
     <div class="radio" id="rates">
 
 		<input type="radio" id="r1" name="role" value="admin" />Admin

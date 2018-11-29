@@ -27,9 +27,12 @@ div.scrollmenu a:hover {
 </style>
 <body>
 	<div class="scrollmenu">
-		<a href="searchstock">Search Stock</a> <a href="createstock">Add
-			Stock</a> <a href="">Search User</a> <a href="">Add User</a> <a href="">Search
-			Invoice</a> <a href="">Add Invoice</a>
+		<a href="searchstock">Search Stock</a> 
+		<a href="createstock">Add Stock</a> 
+		<a href="searchuser">Search User</a> 
+		<a href="adduser">Add User</a> 
+		<a href="">Search Invoice</a>
+	    <a href="">Add Invoice</a>
 	</div>
 </body>
 </html>

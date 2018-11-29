@@ -41,7 +41,29 @@ public class UpdateUserServlet extends HttpServlet {
 		tuser.setEmail(request.getParameter("email"));
 		tuser.setAddress(request.getParameter("address"));
 		tuser.setPassword(request.getParameter("password"));
-		
+		tuser.setRoleID(Integer.parseInt(request.getParameter("radioBtn")));
+		 
+//         if(request.getParameter("radioBtn") != null) {
+//             if(request.getParameter("radioBtn").equals("radio1")) {
+//                 out.println("Radio button 1 was selected.<BR>");
+//             }
+//             else {
+//                 out.println("Radio button 1 was not selected.<BR>");
+//             }
+//             if(request.getParameter("radioBtn").equals("radio2")) {
+//                 out.println("Radio button 2 was selected.<BR>");
+//             }
+//             else {
+//                 out.println("Radio button 2 was not selected.<BR>");
+//             }
+//             if(request.getParameter("radioBtn").equals("radio3")) {
+//                 out.println("Radio button 3 was selected.<BR>");
+//             }
+//             else {
+//                 out.println("Radio button 3 was not selected.<BR>");
+//             }
+//         }
+    
 		tuser=iUserService.updateUser(tuser);
 		request.getRequestDispatcher("/View/UpdateUser.jsp").forward(request, response);
 	}

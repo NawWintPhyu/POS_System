@@ -1,6 +1,7 @@
 package Controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -24,7 +25,7 @@ public class LoginServlet extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		PrintWriter out = response.getWriter();
 		String userName=request.getParameter("username");
 		String password=request.getParameter("password");
 	    String roleName=request.getParameter("role");
@@ -59,7 +60,7 @@ public class LoginServlet extends HttpServlet {
 		if(!userList.equals("") && (userInquiryDTO.getRoleID()==51) || (userInquiryDTO.getRoleID()==101)){
 			request.getRequestDispatcher("/View/Home.jsp").forward(request, response);
 		}
-		
+	
 
 
 		

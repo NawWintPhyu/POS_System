@@ -4,9 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title></title>
+<title>header</title>
+
 </head>
 <style>
+
 div.scrollmenu {
 	background-color: #333;
 	overflow: auto;
@@ -19,13 +21,39 @@ div.scrollmenu a {
 	text-align: center;
 	padding: 14px;
 	text-decoration: none;
+	
+	
 }
 
 div.scrollmenu a:hover {
 	background-color: #777;
 }
 
+div.logoutBtn {
+	background-color: #333;
+	overflow: auto;
+	white-space: nowrap;
+}
+
+div.logoutBtn a {
+	display: inline-block;
+	color: white;
+	text-align: center;
+	padding: 14px;
+	text-decoration: none;
+	background-color: blue;
+
+	
+}
+
+div.logoutBtn a:hover {
+	background-color: #777;
+}
+
+
+
 </style>
+
 <body>
 	<div class="scrollmenu">
 		<a href="searchstock">Search Stock</a> 
@@ -34,6 +62,12 @@ div.scrollmenu a:hover {
 		<a href="adduser">Add User</a> 
 		<a href="">Search Invoice</a>
 	    <a href="">Add Invoice</a>
+	   
+	    <div class="logoutBtn" align="right"> <a href="logout">Logout</a>a</div>
+	    
 	</div>
+	
+	
+	
 </body>
 </html>

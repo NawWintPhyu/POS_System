@@ -18,7 +18,7 @@ public class T_User {
 	private String address;
 
 	private String password;//hello
-	private String education;//hi
+	private String education;//hi ,how are you
 
 	
 	

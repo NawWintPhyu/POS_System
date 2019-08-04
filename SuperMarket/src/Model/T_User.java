@@ -19,6 +19,7 @@ public class T_User {
 
 	private String password;//hello
 	private String education;//hi ,how are you
+	private String fatherName;
 
 	
 	

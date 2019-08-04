@@ -23,6 +23,7 @@ public class Stock {
 	private String description;
 	private int status;
 	private int userID;
+	private Date expiredDate;
 	
 //	@ManyToOne
 //	private User user;

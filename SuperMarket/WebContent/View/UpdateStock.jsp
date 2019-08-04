@@ -8,7 +8,7 @@
 <title>editStock</title>
 <style>
 input[type=text] {
-	width: 99%;
+	width: 100%;
 	padding: 6px 10px;
 	margin: 8px 0;
 	display: inline-block;

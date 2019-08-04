@@ -16,8 +16,10 @@ public class T_User {
 	private int phoneNumber;
 	private String email;
 	private String address;
+
 	private String password;//hello
 	private String education;
+
 	
 	
 	

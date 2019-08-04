@@ -17,6 +17,7 @@ public class User {
 	private int phoneNumber;
 	private String email;
 	private String address;
+	private String education;
 	
 	public User(int userID,int roleID,String userName,int phoneNumber,String email,String address){
 		super();

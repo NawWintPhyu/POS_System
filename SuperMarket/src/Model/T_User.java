@@ -17,6 +17,7 @@ public class T_User {
 	private String email;
 	private String address;
 	private String password;
+	private String nrc;
 	
 	
 	public T_User(int userID,int roleID,String userName,int phoneNumber,String email,String address,String password){
